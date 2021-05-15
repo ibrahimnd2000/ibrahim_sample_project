@@ -12,9 +12,9 @@ class User {
   User(this._profileImgURL, this._name, this._email);
 
   User.fromJson(Map<String, dynamic> json)
-      : _profileImgURL = json['profileImgURL'],
-        _name = json['name'],
-        _email = json['email'];
+      : _profileImgURL = json['profileImgURL'] ?? "",
+        _name = json['name'] ?? "",
+        _email = json['email'] ?? "";
 
   Map<String, dynamic> toJson() => {
         'profileImgURL': _profileImgURL,
